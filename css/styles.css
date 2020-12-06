@@ -570,44 +570,31 @@ img {
     width: 11px;
     height: 11px;
     display: inline-block;
-    background-image: url("../icons/Checkmark.svg");
-    background-size: 9px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: 1px solid #55DFB4;
-    border-radius: 2px;
+    background-image: url("../icons/Ckechmark-1.svg");
     margin-right: 13px;
 }
 
-.x::before {
-    content: "x";
-    font-family: "Raleway", sans-serif;
-    font-weight: bold;
-    font-size: 10px;
-    color: #fb3b64;
+.close::before {
+    content: "";
     width: 11px;
     height: 11px;
-    border: 1px solid #fb3b64;
-    border-radius: 2px;
+    display: inline-block;
+    background-image: url("../icons/Close.svg");
     margin-right: 13px;
-    padding: 0 3px;
 }
 
 /*Contact*/
 
 .contact__section {
-    width: 100%;
-    /*display: flex;*/
-    /*justify-content: center;*/
     background-color: #FFFFFF;
     margin-top: 155px;
+    display: flex;
+    justify-content: center;
 }
 
 .form__box {
     width: 896px;
     height: 376px;
-    margin-left: 365px;
-    margin-right: 365px;
     display: flex;
     justify-content: space-between;
 }
@@ -618,11 +605,16 @@ img {
     ;
 }
 
-.contact__section h1 {
+.left__side h1 {
     font-family: "Raleway", sans-serif;
     font-size: 49px;
     margin-bottom: 22px;
 
+}
+
+.left__side p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
 }
 
 .comment {
@@ -667,4 +659,80 @@ form {
     width: 440px;
     display: flex;
     flex-direction: column;
+}
+
+/*marginesy w formularzu zupełnie od czapy aby dopasować wygląd do projektu*/
+
+label {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    color: #08A6E4;
+    margin-bottom: 22px;
+}
+
+input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    margin-bottom: 22px;
+}
+
+label[for="email"] {
+    margin-top: 20px;
+}
+
+form p {
+    width: 405px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    color: #707070;
+    margin-top: 30px;
+}
+
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkbox {
+    cursor: pointer;
+    display: flex;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    color: #707070;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+.checkbox span {
+    height: 24px;
+    flex-shrink: 0;
+    flex-basis: 24px;
+    border: 1px solid #707070;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.checkbox input:checked + span {
+    background-image: url(../icons/Checkmark.svg);
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+}
+
+button {
+    display: inline-block;
+    align-self: flex-end;
+    width: 226px;
+    height: 57px;
+    margin-top: 20px;
+    border-radius: 50px;
+    border: none;
+    background-color: #08a6e4;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    color: #FFFFFF;
 }
