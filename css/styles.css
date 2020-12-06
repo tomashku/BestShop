@@ -3,12 +3,16 @@
 
 /*-----------------------------HEADER---------------------*/
 
+:root {
+    --side-padding-on-nav-items: 5px;
+}
+
 .container {
     width: 1352px;
 }
 
 .header__container {
-    margin: auto;
+    margin: 0;
     height: 70px;
     background-color: #FFFFFF;
 
@@ -16,7 +20,7 @@
     justify-content: space-between;
     align-items: center;
 
-    box-shadow: 0px 3px 6px #00000029;
+    box-shadow: 0 3px 6px #00000029;
 }
 
 .logo {
@@ -24,23 +28,23 @@
     font-size: 32px;
     color: #08A6E4;;
 
-    margin-left: 136px;
+    margin-left: calc(136px - var(--side-padding-on-nav-items) * 2);
 }
 
 .whyus {
-    margin-right: 94px;
+    margin-right: calc(94px - var(--side-padding-on-nav-items) * 2);
 }
 
 .benefits {
-    margin-right: 94px;
+    margin-right: calc(94px - var(--side-padding-on-nav-items) * 2);
 }
 
 .prices {
-    margin-right: 94px;
+    margin-right: calc(94px - var(--side-padding-on-nav-items) * 2);
 }
 
 .contact {
-    margin-right: 136px;
+    margin-right: calc(136px - var(--side-padding-on-nav-items) * 2);
 }
 
 .nav li {
@@ -49,20 +53,618 @@
 }
 
 .nav li a {
-
+    box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
     font-size: 11px;
     font-weight: bold;
     color: #A5A5A5;
     text-decoration: none;
+    border-bottom: 4px transparent;
 
-    padding: ;
-
-    border-bottom: ;
+    padding: 23px var(--side-padding-on-nav-items);
 }
 
 .nav li a:hover {
     color: #000000;
+    border-bottom: 4px solid #08A6E4;
+}
+
+/*------------------------------------------Section*/
+
+
+.section1 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*align-items: center;*/
+}
+
+.section1 h1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 49px;
+    text-align: center;
+
+    margin-top: 130px;
 
 }
 
+.section1 p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    text-align: center;
+
+    margin-top: 20px;
+    margin-bottom: 60px;
+
+}
+
+.section1 a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+
+    width: 127px;
+    margin-bottom: 15px;
+    padding: 22px 157px;
+
+    background-color: #08A6E4;
+    border-radius: 40px;
+    align-self: center; /* bez tego przycisk ląduje z lewej strony ekranu ???? dlaczego ?????? */
+}
+
+img {
+    margin-top: 15px;
+    width: 100%;
+    height: auto;
+}
+
+/*---------------------------------------------------------Statistics*/
+
+
+.statistics {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.statistics h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 36px;
+
+    margin-top: 22px;
+
+    position: relative;
+}
+
+/*Circles*/
+
+.circles {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    margin-top: 100px;
+}
+
+.circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 121px;
+}
+
+.number {
+    margin-top: 15px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    letter-spacing: 6px;
+}
+
+.description {
+    font-family: "Raleway", sans-serif;
+    font-size: 17px;
+    color: #A5A5A5;
+
+    width: 120px;
+
+    margin-top: 20px;
+
+    align-self: center; /* bez tego treść <p> ląduje w lewym dolnym rogu diva ???? dlaczego ?????? */
+}
+
+.red, .blue, .green {
+    width: 63px;
+    height: 63px;
+    border-radius: 50%;
+    margin: 0 137px;
+}
+
+.red {
+    background-color: #FB3B64;
+}
+
+.blue {
+    background-color: #08A6E4;
+}
+
+.green {
+    background-color: #55DFB4;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/*Icons*/
+
+.icons {
+    position: absolute;
+    left: 290px;
+    bottom: -315px;
+}
+
+
+.icon {
+    margin: 0 140px;
+}
+
+/*------------------------------------------Benefits*/
+
+.section__benefits {
+    width: 100%;
+    background-color: #F7F7F7;
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    width: 1124px;
+    height: 370px;
+    background-color: #FFFFFF;
+}
+
+.first {
+    margin-top: 105px;
+    margin-left: 251px;
+    margin-right: 251px;
+    margin-bottom: 37px;
+}
+
+.second {
+    margin-left: 251px;
+    margin-right: 251px;
+    margin-bottom: 37px;
+}
+
+.third {
+    background-color: #F7F7F7;
+
+    margin-left: 251px;
+    margin-right: 251px;
+    margin-bottom: 37px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.third__1 {
+    background-color: #FFFFFF;
+    width: 623px;
+    height: 370px;
+
+    position: relative;
+}
+
+.third__2 {
+    background-color: #FFFFFF;
+    width: 440px;
+    height: 370px;
+}
+
+/*----------------------------------------*/
+
+.left1 {
+    display: flex;
+    flex-direction: column;
+
+    width: 416px;
+    height: 188px;
+
+    margin-top: 91px;
+    margin-left: 35px;
+}
+
+.left1::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 320px;
+    margin-top: 50px;
+    background-color: #FB3B64;
+}
+
+.section__benefits h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 36px;
+    line-height: 42px;
+    color: #000000;
+}
+
+.section__benefits p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: #000000;
+
+    margin-top: 30px;
+}
+
+/*-----------------------------------------*/
+
+.right1 {
+    position: relative;
+
+    width: 433px;
+    height: 294px;
+
+    margin-top: 38px;
+    margin-right: 71px;
+}
+
+.right1 img {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+}
+
+.right1::after {
+    content: "";
+    display: block;
+    width: 180px;
+    height: 180px;
+    transform: rotate(45deg);
+    border-radius: 40px;
+    background-color: #FB3B64;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+
+/*----------------------------------------*/
+
+
+.left2 {
+    position: relative;
+
+    width: 426px;
+    height: 328px;
+
+    margin-top: 29px;
+    margin-left: 78px;
+}
+
+.left2::after {
+    content: "";
+    display: block;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background-color: #07ACE6;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.left2 img {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.right2 {
+    position: relative;
+
+    width: 416px;
+    height: 230px;
+
+    margin-top: 69px;
+    margin-right: 20px;
+}
+
+.right2 p::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 320px;
+    margin-top: 50px;
+    background-color: #08A6E4;
+
+    position: absolute;
+}
+
+.right2 h2 {
+    width: 246px;
+}
+
+.right2 p {
+    width: 416px;
+    margin-top: 30px;
+}
+
+/*---------------------------------------------------*/
+
+.third__1 h2 {
+    width: 348px;
+    margin-top: 70px;
+    margin-left: 35px;
+}
+
+.third__1 p {
+    width: 553px;
+    margin-top: 30px;
+    margin-left: 35px;
+}
+
+.third__1 p::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 320px;
+    margin-top: 50px;
+    background-color: #55DFB4;
+
+    position: absolute;
+}
+
+.third__2 {
+    box-sizing: border-box;
+    padding: 98px 82px 64px 62px;
+    background-color: #55DFB4;
+}
+
+
+/*Pricing*/
+
+.pricing {
+    display: flex;
+    justify-content: center;
+    background-color: #FFFFFF;
+
+    margin-top: 100px;
+}
+
+.pricing__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1266px;
+    height: 616px;
+}
+
+.frame {
+    width: 372px;
+    height: 461px;
+    border: 1px solid;
+    border-radius: 18px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0 30px 0 30px;
+}
+
+.frame h3 {
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #13253B;
+
+    margin-top: 34px;
+}
+
+.frame p {
+    line-height: 41px;
+    font-size: 14px;
+}
+
+.frame a {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+
+    align-self: center;
+    bottom: -25px;
+
+    color: #FFFFFF;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.frame .dolar {
+    font-family: "Open Sans", sans-serif;
+    font-size: 46px;
+    font-weight: 300;
+
+    margin-top: 14px;
+}
+
+.limited {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.basic {
+    border-color: #FB3B64;
+    position: relative;
+}
+
+.basic .dolar {
+    color: #FB3B64;
+    margin-bottom: 69px;
+}
+
+.basic a {
+    background-color: #FB3B64;
+}
+
+.professional {
+    height: 500px;
+    border-color: #07ACE6;
+    position: relative;
+}
+
+.professional .dolar {
+    color: #07ACE6;
+    margin-bottom: 5px;
+}
+
+.professional a {
+    background-color: #07ACE6;
+}
+
+/*margin 40 cos margin from specs is 61 - 20 (line height of p(41 /2 = 20)) */
+.professional .limited {
+    margin-bottom: 40px;
+}
+
+.premium {
+    border-color: #55DFB4;
+    position: relative;
+}
+
+.premium .dolar {
+    color: #55DFB4;
+}
+
+.premium a {
+    background-color: #55DFB4;
+}
+
+/*margin 30 cos margin from specs is 69 - 20 (line height of p(41 /2 = 20)) */
+.premium .limited {
+    margin-bottom: 30px;
+}
+
+.checkmark::before {
+    content: "";
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+    background-image: url("../icons/Checkmark.svg");
+    background-size: 9px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #55DFB4;
+    border-radius: 2px;
+    margin-right: 13px;
+}
+
+.x::before {
+    content: "x";
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+    color: #fb3b64;
+    width: 11px;
+    height: 11px;
+    border: 1px solid #fb3b64;
+    border-radius: 2px;
+    margin-right: 13px;
+    padding: 0 3px;
+}
+
+/*Contact*/
+
+.contact__section {
+    width: 100%;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    background-color: #FFFFFF;
+    margin-top: 155px;
+}
+
+.form__box {
+    width: 896px;
+    height: 376px;
+    margin-left: 365px;
+    margin-right: 365px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left__side {
+    display: flex;
+    flex-direction: column;
+    ;
+}
+
+.contact__section h1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 49px;
+    margin-bottom: 22px;
+
+}
+
+.comment {
+    font-family: "Open Sans", sans-serif;
+    font-size: 22px;
+}
+
+.contact__details {
+    display: flex;
+    justify-content: left;
+}
+
+.email, .phone {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: #A5A5A5;
+    margin-top: 42px;
+}
+
+.email::before {
+    content: url("../icons/Mail Icon.svg");
+    background-position: center;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.phone::before {
+    content: url("../icons/Phone Icon.svg");
+    margin-right: 10px;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+
+.contact__details p {
+    align-items: center;
+    vertical-align: center;
+}
+
+/*----------------------------*/
+
+form {
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+}
